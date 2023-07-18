@@ -1,0 +1,14 @@
+    body {
+       background-color: #041E42; 
+    }
+    .board {
+        margin: auto;
+        display: grid;
+        width: 300px;
+        height: 300px;
+    }
+.players {
+    color: white;
+    display: flex;
+    justify-content: center;
+}
