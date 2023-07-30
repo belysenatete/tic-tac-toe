@@ -1,7 +1,8 @@
 const board = document.querySelector('.board');
-const player = document.querySelector('.player');
-const computer = document.querySelector('.computer')
-function viewBoard(){
+let player1='x';
+let player2='o';
+let currentPlayer = player1;
+function createBoard(){
     board.style.gridTemplateColumns = `repeat(3, 100px)`;
     board.style.gridTemplateRows = `repeat(3, 100px)`;
     let numdivs = 9;
@@ -12,10 +13,24 @@ function viewBoard(){
         div.style.color = 'white'
         div.style.textAlign = 'center'
         board.appendChild(div);
-        div.addEventListener('click', function(e){
-        div.textContent = player.textContent;
-        })
-        }
     
-}
-viewBoard();
+        //player1move
+            div.addEventListener('click', function(){
+                // if the cell is already filled don't do anything
+                if (div.textContent !== '') return;
+                 // currentPlayer x in a cell   
+                    div.textContent = currentPlayer;
+                    // switch the currentPlayer to the other player 
+                currentPlayer = currentPlayer === player1 ? player2 : player1;
+                
+                })
+                
+                }
+ }
+
+createBoard();
+
+
+
+
+

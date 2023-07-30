@@ -5,14 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>TIC-TAC-TOE</title>
+    <title>TIC-TAC-TOE(Basic)</title>
 </head>
 <body>
-    <div class="board"></div>
-    <div class="players">
-        <h2>Player:<span class="player" style="font-size: 50px;">o</span></h2>
-        <h2>Computer:<span class="computer" style="font-size: 50px;">x</span></h2>
+    <div class="container">
+        <h1>TIC-TAC-TOE</h1>
+        <div class="board"></div>
+        <div class="players">
+            <h2>x goes first</h2>
+            <p id="message"></p>
+        </div>
+        <button onclick="reset_board()">RESET BOARD</button>
     </div>
+    
    <script src="main.js"></script> 
 </body>
 </html>
